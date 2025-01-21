@@ -20,7 +20,8 @@ const ImageUpload = ({ onImageUpload }) => {
       formData.append("image", selectedFile);
 
       try{
-          const response = await fetch("http://localhost:2508/uploadImage", {
+        //   const response = await fetch("http://localhost:2508/uploadImage", {
+            const response = await fetch("https://email-builder-backend-jfx8.onrender.com/uploadImage", {
               method : "POST",
               body : formData,
           });

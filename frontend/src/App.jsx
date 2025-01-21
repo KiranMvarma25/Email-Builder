@@ -13,7 +13,8 @@ function App() {
     });
 
     useEffect(() => {
-        fetch('http://localhost:2508/getEmailLayout')
+        // fetch('http://localhost:2508/getEmailLayout')
+        fetch('https://email-builder-backend-jfx8.onrender.com/getEmailLayout')
             .then((response) => {
                 if(!response.ok) 
                     throw new Error('Network response not ok');
@@ -40,7 +41,8 @@ function App() {
     };
 
     const handleSubmit = () => {
-        fetch('http://localhost:2508/uploadEmailConfig', {
+        // fetch('http://localhost:2508/uploadEmailConfig', {
+        fetch('https://email-builder-backend-jfx8.onrender.com/uploadEmailConfig', {
             method : 'POST',
             headers : {
                 'Content-Type': 'application/json',
@@ -54,7 +56,8 @@ function App() {
 
     const handleDownload = () => {
         console.log("Form Data", formData);
-        fetch('http://localhost:2508/renderAndDownloadTemplate', {
+        // fetch('http://localhost:2508/renderAndDownloadTemplate', {
+        fetch('https://email-builder-backend-jfx8.onrender.com/renderAndDownloadTemplate', {
             method : 'POST',
             headers : {
                 'Content-Type': 'application/json',

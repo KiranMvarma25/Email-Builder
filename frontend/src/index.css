@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.form{
+    border: 2px solid black;
+    width: 550px;
+    padding: 50px;
+    border-radius: 25px;
+    background-color: rgb(196, 204, 204);
+    margin-bottom: 50px;
+}
+
+.heading{
+    margin-top: 25px;
+    text-align: center;
+}
+
+.parent{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.titleInput{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: x-large;
+}
+
+.textareaInput{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    font-size: x-large;
+}
+
+.fileInput{
+    font-size: larger;
+}
+
+.fileInputButton{
+    font-size: medium;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.fileInputButton:hover{
+    background-color: #0c8f13;
+}
+
+.uploadStatus{
+    margin-top: 5px;
+    
+}
+
+.submitButton{
+    font-size: larger;
+    padding: 7px 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #0c8f13;
+}
+
+.downloadTemplateButton{
+    font-size: larger;
+    padding: 7px 14px;
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.downloadTemplateButton:hover{
+    background-color: rgb(29, 93, 213);
+}

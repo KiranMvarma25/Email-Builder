@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        @media(min-width: 768px){
+            header img{
+                width: 100px;
+                height: 100px;
+            }
+            header h1{
+                font-size: 2rem;
+            }
+            main p{
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div style="padding: 10px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+        <header style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <img src="{{logo}}" alt="Logo" style="width: 100px; height: 100px; border-radius: 50px; margin: 0;">
+            <h1 style="margin: 0;">{{title}}</h1>
+        </header>
+        <main>
+            <p>{{body}}</p>
+        </main>
+    </div>
+</body>
+</html>

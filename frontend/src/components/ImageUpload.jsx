@@ -3,6 +3,7 @@ import { useState } from "react";
 const ImageUpload = ({ onImageUpload }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadStatus, setUploadStatus] = useState("");
+  const [isUploading, setIsUploading] = useState(false);
 
   const handleImageChange = (event) => {
       const file = event.target.files[0];
@@ -18,6 +19,8 @@ const ImageUpload = ({ onImageUpload }) => {
 
       const formData = new FormData();
       formData.append("image", selectedFile);
+      setIsUploading(true);
+      setUploadStatus("");
 
       try{
         //   const response = await fetch("http://localhost:2508/uploadImage", {
@@ -39,15 +42,18 @@ const ImageUpload = ({ onImageUpload }) => {
       catch(error){
           setUploadStatus(`Error uploading image: ${error.message}`);
       }
+      finally{
+        setIsUploading(false);
+      }
   };
 
   return (
       <div>
           {/* <h4>Image Upload</h4> */}
-          <input className="fileInput" type="file" onChange={handleImageChange} />
+          <input className="fileInput" type="file" onChange={handleImageChange} disabled={isUploading} />
           <br />
           <br />
-          <button className="fileInputButton" onClick={handleUpload}>Upload Logo</button>
+          <button className="fileInputButton" onClick={handleUpload} disabled={isUploading}>{isUploading ? "Uploading..." : "Upload Logo"}</button>
           {uploadStatus && <h3 className="uploadStatus">{uploadStatus}</h3>}
       </div>
   );
